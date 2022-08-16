@@ -1,0 +1,157 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+   
+}
+
+.background{
+    height: 175vh;
+    width: 100vw;
+    background-image: url('https://i.pinimg.com/originals/eb/96/be/eb96bee0fb5948af179b59151e7e7a99.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: brightness(50%);
+    position: absolute;
+    top: 0;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: rgba(17, 161, 245, 0.794);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-title-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.main-header-title {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+.logo {
+    max-height: 4rem;
+    filter: drop-shadow(3px 4px 5px rgba(36, 36, 36, 0.4));
+}
+
+.size {
+    width: 200px;
+    height: 200px;
+}
+
+
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    padding-right: 1rem;
+}
+
+.nav-links > a {
+    text-decoration: none;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 2px 2px 4px gray;
+    color: white;
+    font-size: 1.5rem;
+
+}
+
+.nav-links > a:hover {
+    color: rgb(238, 232, 232);
+}
+
+
+.navbar-spacing {
+    margin-top: 50px;
+}
+.ukuleles-for-sale {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ukulele-item {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}
+
+ .price {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}
+
+.ukulele-picture {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid white;
+}
+
+.about-wrapper {
+    max-width: 50%;
+    margin-top: 3rem;
+}
+
+.about-title {
+    color: white;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+}
+
+.about-article {
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+
+.contact{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin-top: 3rem;
+    border-top: 2px solid white;
+}
+.how-to{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 34px;
+}

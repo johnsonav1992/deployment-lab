@@ -8,7 +8,7 @@ require('dotenv').config();
 app.use(cors());
 app.use(express.json());
 
-port = process.env.PORT || 4000;
+const port = process.env.PORT || 4000;
 
 app.get('/', getHomepage);
 app.get('/css',getCSS);

@@ -102,6 +102,7 @@ html {
  .price {
     margin-top: 10px;
     display: flex;
+    padding-left: 20px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -149,6 +150,7 @@ html {
     align-items: center;
     color: white;
     font-family: sans-serif;
+    text-decoration: none;
 }
 
 .about-title {

@@ -7,6 +7,7 @@ var rollbar = new Rollbar({
 
 const homeLink = document.querySelector('.home-link')
 
-homeLink.addEventListener('click', () => {
+homeLink.addEventListener('click', (e) => {
+    e.preventDefault()
     rollbar.warn('WARNING!!!!!!')
 })

@@ -1,12 +1,17 @@
 const path = require('path')
 const Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+    accessToken: 'f6fa480d554e4760ac11ba0f768be238',
+    captureUncaught: true,
+    captureUnhandledRejections: true
+  });
 
 module.exports = {
     getHomepage: (req, res) => {
         try {
             doesNotExist()
         } catch (err) {
-            Rollbar.critical(err)
+            rollbar.critical(err)
         }
         res.sendFile(path.join(__dirname, '../client/index.html'))
            

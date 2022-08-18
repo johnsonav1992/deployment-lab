@@ -5,9 +5,10 @@ var rollbar = new Rollbar({
     captureUnhandledRejections: true
   });
 
+rollbar.warning('WARNING!!!!!!')
+
 const homeLink = document.querySelector('.home-link')
 
 homeLink.addEventListener('click', (e) => {
     e.preventDefault()
-    rollbar.warning('WARNING!!!!!!')
 })

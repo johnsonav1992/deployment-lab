@@ -5,6 +5,9 @@ const controller = require('./controller.js');
 const {getHomepage, getCSS, getJS, getRollbar} = controller;
 require('dotenv').config();
 
+// include and initialize the rollbar library with your access token
+var Rollbar = require("rollbar");
+
 // record a generic message and send it to Rollbar
 Rollbar.log("Hello world!");
 

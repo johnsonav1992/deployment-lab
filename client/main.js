@@ -1,6 +1,6 @@
 const Rollbar = require('rollbar')
 var rollbar = new Rollbar({
-    accessToken: 'f6fa480d554e4760ac11ba0f768be238',
+    accessToken: '3aaa61765f034ab38a174ebc1cbb3f7f',
     captureUncaught: true,
     captureUnhandledRejections: true
   });

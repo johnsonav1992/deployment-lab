@@ -5,6 +5,17 @@ const controller = require('./controller.js');
 const {getHomepage, getCSS, getJS} = controller;
 require('dotenv').config();
 
+// include and initialize the rollbar library with your access token
+var Rollbar = require("rollbar");
+var rollbar = new Rollbar({
+  accessToken: 'f6fa480d554e4760ac11ba0f768be238',
+  captureUncaught: true,
+  captureUnhandledRejections: true
+});
+
+// record a generic message and send it to Rollbar
+rollbar.log("Hello world!");
+
 app.use(cors());
 app.use(express.json());
 app.use(express.static('client'))

@@ -1,4 +1,5 @@
 const path = require('path')
+const Rollbar = require('rollbar')
 
 module.exports = {
     getHomepage: (req, res) => {
@@ -14,7 +15,11 @@ module.exports = {
     },
 
     getRollbar: (req, res) => {
-        doesNotExist()
+        try {
+            doesNotExist()
+        } catch (err) {
+            Rollbar.critical(err)
+        }
     }
 
 }

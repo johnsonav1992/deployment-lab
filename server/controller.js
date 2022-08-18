@@ -3,7 +3,13 @@ const Rollbar = require('rollbar')
 
 module.exports = {
     getHomepage: (req, res) => {
-            res.sendFile(path.join(__dirname, '../client/index.html'))
+        try {
+            doesNotExist()
+        } catch (err) {
+            Rollbar.critical(err)
+        }
+        res.sendFile(path.join(__dirname, '../client/index.html'))
+           
     },
 
     getCSS: (req, res) => {
@@ -15,11 +21,7 @@ module.exports = {
     },
 
     getRollbar: (req, res) => {
-        try {
-            doesNotExist()
-        } catch (err) {
-            Rollbar.critical(err)
-        }
+    
     }
 
 }

@@ -6,13 +6,14 @@ var rollbar = new Rollbar({
     captureUnhandledRejections: true
   });
 
+try {
+    doesNotExist()
+} catch (err) {
+    rollbar.critical(err)
+}
+
 module.exports = {
     getHomepage: (req, res) => {
-        try {
-            doesNotExist()
-        } catch (err) {
-            rollbar.critical(err)
-        }
         res.sendFile(path.join(__dirname, '../client/index.html'))
            
     },

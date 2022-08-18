@@ -9,5 +9,5 @@ const homeLink = document.querySelector('.home-link')
 
 homeLink.addEventListener('click', (e) => {
     e.preventDefault()
-    rollbar.warn('WARNING!!!!!!')
+    rollbar.warning('WARNING!!!!!!')
 })

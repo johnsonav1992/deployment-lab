@@ -6,11 +6,7 @@ var rollbar = new Rollbar({
     captureUnhandledRejections: true
   });
 
-try {
-    doesNotExist()
-} catch (err) {
-    rollbar.critical(err)
-}
+
 
 module.exports = {
     getHomepage: (req, res) => {
@@ -27,7 +23,11 @@ module.exports = {
     },
 
     getRollbar: (req, res) => {
-    
+        try {
+            doesNotExist()
+        } catch (err) {
+            rollbar.critical(err)
+        }
     }
 
 }

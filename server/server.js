@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const controller = require('./controller.js');
-const {getHomepage, getCSS, getJS} = controller;
+const {getHomepage, getCSS, getJS, getRollbar} = controller;
 require('dotenv').config();
 
 // include and initialize the rollbar library with your access token
@@ -23,6 +23,7 @@ app.use(express.static('client'))
 const port = process.env.PORT || 4000;
 
 app.get('/', getHomepage);
+app.get('/rollbar', getRollbar);
 app.get('/css',getCSS);
 app.get('/js', getJS);
 app.listen(port,console.log(`Server running on ${port}`))
